@@ -1,7 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
-
+#include "libft.h"
 
 static	char	*ft_strndup(char *src, int n)
 {
@@ -82,17 +79,4 @@ char	**ft_split(char const *s, char c)
 	words_nbr = ft_words_nbr(s, c);
 	tab = ft_create_tab(s, c, words_nbr);
 	return (tab);
-}
-
-int main()
-{
-	char **tab;
-	tab = ft_split("salut les amis", ' ');
-	int i;
-	i = 0;
-	while (i < 3)
-	{
-		printf("%s\n", tab[i]);		
-		i++;
-	}
 }

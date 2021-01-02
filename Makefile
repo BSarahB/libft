@@ -51,30 +51,30 @@ BSRCS	=	ft_lstnew.c					\
 
 BOBJS	=	$(BSRCS:.c=.o)
 
-OBJS = ${SRCS:.c=.o}
+OBJS = $(SRCS:.c=.o)
 
 RM = rm -f
 
-CFLAGS = -Wall -Wextra -Werror -I ${HEADER}
+CFLAGS = -Wall -Wextra -Werror -I $(HEADER)
 
 .c.o:
-		${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
+		$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
 
-${NAME}:	${OBJS}
-			ar rc ${NAME} ${OBJS}
-			ranlib ${NAME}
+$(NAME):	$(OBJS)
+			ar rc $(NAME) $(OBJS)
+			ranlib $(NAME)
 
-all:		${NAME}
+all:		$(NAME)
 
-bonus:		${BOBJS}
+bonus:		$(BOBJS)
 			ar rc $(NAME) $(BOBJS)
 			ranlib $(NAME)
 
 clean:
-			${RM} ${OBJS} ${BOBJS}
+			$(RM) $(OBJS) $(BOBJS)
 
 fclean:		clean
-			${RM} ${NAME}
+			$(RM) $(NAME)
 
 re:		fclean all
 

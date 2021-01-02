@@ -2,20 +2,14 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	char	*str;
-	char	*str_c;
+	int j;
 
-	str = (char *)s;
-	str_c = NULL;
-	while (*str)
-		{
-			if (*str == (unsigned char)c)
-					str_c = str;
-			str++;
-		}
-	if (c == '\0')
-		return (str_c);
-	if(str_c != NULL)
-		return (str_c);
+	j = (int)ft_strlen((char *)s);
+	while (j >= 0)
+	{
+		if (s[j] == c)
+			return ((char *)&s[j]);
+		j--;
+	}
 	return (NULL);
 }
