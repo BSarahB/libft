@@ -35,7 +35,7 @@ static	char	*ft_strndup(char *src, int n)
 
 static	char	**ft_create_tab(char const *s, char c, size_t words_nbr)
 {
-	char	**tab;
+	char		**tab;
 	size_t		i;
 	size_t		k;
 	size_t		wd_length;
@@ -59,7 +59,7 @@ static	char	**ft_create_tab(char const *s, char c, size_t words_nbr)
 	return (tab);
 }
 
-static size_t		ft_words_nbr(const char *s, char c)
+static	size_t	ft_words_nbr(const char *s, char c)
 {
 	size_t i;
 	size_t k;
@@ -81,9 +81,9 @@ static size_t		ft_words_nbr(const char *s, char c)
 	return (words_nbr);
 }
 
-char	**ft_split(char const *s, char c)
+char			**ft_split(char const *s, char c)
 {
-	char	**tab;
+	char		**tab;
 	size_t		words_nbr;
 
 	if (!s)

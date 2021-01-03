@@ -15,6 +15,7 @@
 int		find_length(int n)
 {
 	int length;
+
 	length = (n <= 0) ? 1 : 0;
 	while (n != 0)
 	{
@@ -24,13 +25,12 @@ int		find_length(int n)
 	return (length);
 }
 
-
 char	*ft_itoa(int n)
 {
 	char	*result;
 	int		length;
 	long	nb;
-	
+
 	nb = n;
 	length = find_length(n);
 	if (!(result = (char *)malloc(sizeof(*result) * length + 1)))

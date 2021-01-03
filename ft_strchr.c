@@ -20,6 +20,6 @@ char	*ft_strchr(const char *s, int c)
 	while (*str && *str != (unsigned char)c)
 		str++;
 	if (*str == (unsigned char)c || c == '\0')
-			return (str);
+		return (str);
 	return (NULL);
 }
